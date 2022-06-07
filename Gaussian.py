@@ -39,12 +39,12 @@ print('Train/Test Sizes : ', X_train.shape, X_test.shape, Y_train.shape, Y_test.
 gaussian_nb = GaussianNB()
 gaussian_nb.fit(X_train, Y_train)
 
-predict_train = guassian_nb.fit(X_train, Y_train).predict(X_train)
+predict_train = gaussian_nb.fit(X_train, Y_train).predict(X_train)
 print("Accuracy of the model based on training data is {score}", accuracy_score(Y_train, predict_train))
 
-predict_test = guassian_nb.fit(X_test, Y_test).predict(X_test)
+predict_test = gaussian_nb.fit(X_test, Y_test).predict(X_test)
 print("Accuracy of the model based on testing data is {score}", accuracy_score(Y_test, predict_test))
 
-print("Cross Validation scores are {score}", cross_val_score(guassian_nb, X_train, Y_train, cv=5))
+print("Cross Validation scores are {score}", cross_val_score(gaussian_nb, X_train, Y_train, cv=5))
 
 
